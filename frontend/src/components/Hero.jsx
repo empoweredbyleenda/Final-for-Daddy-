@@ -6,17 +6,8 @@ import { businessInfo } from '../data/mock';
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background - Black with pink accents */}
+      {/* Background - Solid Black */}
       <div className="absolute inset-0 bg-black">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#E91E8C]/40 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#E91E8C]/30 rounded-full blur-3xl" />
-        </div>
-        {/* Subtle pattern */}
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(233,30,140,0.05) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
