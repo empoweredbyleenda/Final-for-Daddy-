@@ -91,7 +91,7 @@ const Hero = () => {
               {/* Main circle */}
               <div className="absolute inset-8 rounded-full border-2 border-[#E91E8C]/40 animate-pulse" />
               <div className="absolute inset-16 rounded-full border border-[#E91E8C]/25" />
-              <div className="absolute inset-24 rounded-full bg-gradient-to-br from-[#E91E8C]/20 to-[#E91E8C]/5 backdrop-blur-sm" />
+              <div className="absolute inset-24 rounded-full bg-[#E91E8C]/10 backdrop-blur-sm" />
               
               {/* Center content */}
               <div className="absolute inset-0 flex items-center justify-center">
