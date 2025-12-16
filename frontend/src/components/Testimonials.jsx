@@ -53,7 +53,7 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E91E8C] to-[#ff6bb3] flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-[#E91E8C] flex items-center justify-center">
                   <span className="text-white font-semibold">
                     {testimonial.name.charAt(0)}
                   </span>
