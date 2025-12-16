@@ -44,7 +44,7 @@ const Services = () => {
                 key={service.id}
                 className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-[#E91E8C]/30"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#E91E8C]/10 to-[#E91E8C]/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                   <Icon className="text-[#E91E8C]" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
