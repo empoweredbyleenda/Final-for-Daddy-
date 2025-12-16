@@ -74,10 +74,6 @@ const WhyChooseUs = () => {
 
         {/* CTA Banner */}
         <div className="mt-20 bg-black rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-          {/* Decorative */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#E91E8C]/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#E91E8C]/15 rounded-full blur-3xl" />
-          
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-light text-white mb-4">
               Ready to Start Your
