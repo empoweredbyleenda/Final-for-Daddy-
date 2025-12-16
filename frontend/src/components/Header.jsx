@@ -32,21 +32,21 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      {/* Top Bar */}
+      {/* Top Bar - Hot Pink */}
       <div className={`transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
-        <div className="bg-stone-900 text-white py-2">
+        <div className="bg-[#E91E8C] text-white py-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm">
             <div className="flex items-center gap-4">
-              <span className="text-stone-300">{businessInfo.hours.weekday}</span>
+              <span className="text-white/90">{businessInfo.hours.weekday}</span>
             </div>
             <div className="flex items-center gap-4">
-              <a href={businessInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+              <a href={businessInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">
                 <Instagram size={16} />
               </a>
-              <a href={businessInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+              <a href={businessInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">
                 <Facebook size={16} />
               </a>
-              <a href={businessInfo.social.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+              <a href={businessInfo.social.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">
                 <Youtube size={16} />
               </a>
             </div>
@@ -60,12 +60,12 @@ const Header = () => {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <span className={`text-2xl font-light tracking-wider transition-colors ${
-              isScrolled ? 'text-stone-900' : 'text-white'
+              isScrolled ? 'text-black' : 'text-white'
             }`}>
               SNATCHED
             </span>
             <span className={`text-2xl font-semibold tracking-wider transition-colors ${
-              isScrolled ? 'text-amber-600' : 'text-amber-400'
+              isScrolled ? 'text-[#E91E8C]' : 'text-[#E91E8C]'
             }`}>
               BEAUTIES
             </span>
@@ -77,8 +77,8 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-amber-500 ${
-                  isScrolled ? 'text-stone-700' : 'text-white'
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#E91E8C] ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
               >
                 {link.name}
@@ -89,14 +89,14 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <a href={`tel:${businessInfo.phone}`} className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-              isScrolled ? 'text-stone-700' : 'text-white'
+              isScrolled ? 'text-gray-700' : 'text-white'
             }`}>
               <Phone size={16} />
               {businessInfo.phone}
             </a>
             <Button
               asChild
-              className="bg-amber-500 hover:bg-amber-600 text-white px-6 rounded-full"
+              className="bg-[#E91E8C] hover:bg-[#d11a7d] text-white px-6 rounded-full border-2 border-[#E91E8C] hover:border-[#d11a7d]"
             >
               <a href={businessInfo.bookingUrl} target="_blank" rel="noopener noreferrer">
                 Book Now
@@ -108,7 +108,7 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 transition-colors ${
-              isScrolled ? 'text-stone-900' : 'text-white'
+              isScrolled ? 'text-black' : 'text-white'
             }`}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -124,19 +124,19 @@ const Header = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-stone-700 font-medium py-2 hover:text-amber-500 transition-colors"
+                  className="text-gray-700 font-medium py-2 hover:text-[#E91E8C] transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
-              <hr className="border-stone-200" />
-              <a href={`tel:${businessInfo.phone}`} className="flex items-center gap-2 text-stone-700">
+              <hr className="border-gray-200" />
+              <a href={`tel:${businessInfo.phone}`} className="flex items-center gap-2 text-gray-700">
                 <Phone size={16} />
                 {businessInfo.phone}
               </a>
               <Button
                 asChild
-                className="bg-amber-500 hover:bg-amber-600 text-white rounded-full w-full"
+                className="bg-[#E91E8C] hover:bg-[#d11a7d] text-white rounded-full w-full"
               >
                 <a href={businessInfo.bookingUrl} target="_blank" rel="noopener noreferrer">
                   Book Now
