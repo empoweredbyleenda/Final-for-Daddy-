@@ -9,7 +9,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image/Visual */}
           <div className="relative">
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-pink-50 to-gray-100">
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-pink-50">
               {/* Placeholder visual */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
