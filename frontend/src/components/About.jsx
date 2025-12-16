@@ -13,7 +13,7 @@ const About = () => {
               {/* Placeholder visual */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#E91E8C] to-[#ff6bb3] flex items-center justify-center">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-[#E91E8C] flex items-center justify-center">
                     <Sparkles className="text-white" size={48} />
                   </div>
                   <h3 className="text-2xl font-light text-gray-700">Snatched Beauties</h3>
