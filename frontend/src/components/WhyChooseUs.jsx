@@ -28,27 +28,27 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-stone-50 to-white">
+    <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div>
-            <div className="inline-flex items-center gap-2 text-amber-600 mb-4">
-              <span className="w-12 h-px bg-amber-600" />
+            <div className="inline-flex items-center gap-2 text-[#E91E8C] mb-4">
+              <span className="w-12 h-px bg-[#E91E8C]" />
               <span className="text-sm font-semibold tracking-wider uppercase">Why Choose Us</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-light text-stone-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-6 leading-tight">
               Experience the
-              <span className="block text-amber-600 font-semibold">Snatched Difference</span>
+              <span className="block text-[#E91E8C] font-semibold">Snatched Difference</span>
             </h2>
-            <p className="text-stone-600 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
               At Snatched Beauties, we don't just offer treatments—we craft personalized 
               journeys to help you achieve your dream body safely and effectively.
             </p>
 
-            <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100">
-              <h3 className="font-semibold text-stone-900 mb-2">Before Your Treatment</h3>
-              <p className="text-stone-600 text-sm">
+            <div className="bg-[#E91E8C]/5 rounded-2xl p-6 border border-[#E91E8C]/20">
+              <h3 className="font-semibold text-gray-900 mb-2">Before Your Treatment</h3>
+              <p className="text-gray-600 text-sm">
                 Please drink 24 ounces of water at least 2 hours before your appointment. 
                 Come dressed comfortably for the best experience.
               </p>
@@ -60,37 +60,37 @@ const WhyChooseUs = () => {
             {reasons.map((reason, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 hover:border-amber-200"
+                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#E91E8C]/30"
               >
-                <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4 group-hover:bg-amber-500 transition-colors">
-                  <reason.icon className="text-amber-600 group-hover:text-white transition-colors" size={22} />
+                <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center mb-4 group-hover:bg-[#E91E8C] transition-colors">
+                  <reason.icon className="text-[#E91E8C] group-hover:text-white transition-colors" size={22} />
                 </div>
-                <h3 className="font-semibold text-stone-900 mb-2">{reason.title}</h3>
-                <p className="text-stone-500 text-sm leading-relaxed">{reason.description}</p>
+                <h3 className="font-semibold text-gray-900 mb-2">{reason.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{reason.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-20 bg-stone-900 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div className="mt-20 bg-black rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
           {/* Decorative */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-amber-400/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#E91E8C]/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#E91E8C]/15 rounded-full blur-3xl" />
           
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-light text-white mb-4">
               Ready to Start Your
-              <span className="text-amber-400 font-semibold"> Transformation?</span>
+              <span className="text-[#E91E8C] font-semibold"> Transformation?</span>
             </h3>
-            <p className="text-stone-400 mb-8 max-w-xl mx-auto">
+            <p className="text-gray-400 mb-8 max-w-xl mx-auto">
               Book your free consultation today and let us create a personalized plan 
               to help you achieve your body goals.
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-8 py-6 rounded-full group"
+              className="bg-[#E91E8C] hover:bg-[#d11a7d] text-white font-semibold px-8 py-6 rounded-full group"
             >
               <a href={businessInfo.bookingUrl} target="_blank" rel="noopener noreferrer">
                 Book Your Free Consultation

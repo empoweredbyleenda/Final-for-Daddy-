@@ -21,20 +21,20 @@ const Results = () => {
   };
 
   return (
-    <section id="results" className="py-24 bg-stone-900">
+    <section id="results" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-amber-400 mb-4">
-            <span className="w-12 h-px bg-amber-400" />
+          <div className="inline-flex items-center gap-2 text-[#E91E8C] mb-4">
+            <span className="w-12 h-px bg-[#E91E8C]" />
             <span className="text-sm font-semibold tracking-wider uppercase">Real Results</span>
-            <span className="w-12 h-px bg-amber-400" />
+            <span className="w-12 h-px bg-[#E91E8C]" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
             See the Transformation
-            <span className="block text-amber-400 font-semibold">Before & After</span>
+            <span className="block text-[#E91E8C] font-semibold">Before & After</span>
           </h2>
-          <p className="text-stone-400 text-lg">
+          <p className="text-gray-400 text-lg">
             Real clients, real results. See the incredible transformations achieved 
             through our non-invasive treatments.
           </p>
@@ -46,32 +46,32 @@ const Results = () => {
             <div
               key={item.id}
               className={`relative aspect-[3/4] rounded-2xl overflow-hidden group cursor-pointer transition-all duration-300 ${
-                index === currentSlide ? 'ring-2 ring-amber-400' : ''
+                index === currentSlide ? 'ring-2 ring-[#E91E8C]' : ''
               }`}
               onClick={() => setCurrentSlide(index)}
             >
               {/* Placeholder for before/after */}
-              <div className="absolute inset-0 bg-gradient-to-br from-stone-700 to-stone-800">
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-amber-500/20 flex items-center justify-center">
-                      <span className="text-amber-400 text-2xl font-light">{index + 1}</span>
+                    <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-[#E91E8C]/20 flex items-center justify-center">
+                      <span className="text-[#E91E8C] text-2xl font-light">{index + 1}</span>
                     </div>
                     <p className="text-white font-medium">{item.title}</p>
-                    <p className="text-stone-400 text-sm">{item.area}</p>
+                    <p className="text-gray-400 text-sm">{item.area}</p>
                   </div>
                 </div>
               </div>
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-amber-500/0 group-hover:bg-amber-500/20 transition-colors" />
+              <div className="absolute inset-0 bg-[#E91E8C]/0 group-hover:bg-[#E91E8C]/20 transition-colors" />
               
               {/* Before/After labels */}
               <div className="absolute bottom-4 left-4 right-4 flex justify-between">
                 <span className="bg-black/50 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
                   Before
                 </span>
-                <span className="bg-amber-500/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
+                <span className="bg-[#E91E8C]/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
                   After
                 </span>
               </div>
@@ -85,7 +85,7 @@ const Results = () => {
             variant="outline"
             size="icon"
             onClick={prevSlide}
-            className="rounded-full border-stone-700 text-stone-400 hover:bg-stone-800 hover:text-white"
+            className="rounded-full border-gray-700 text-gray-400 hover:bg-gray-800 hover:text-white hover:border-[#E91E8C]"
           >
             <ChevronLeft size={20} />
           </Button>
@@ -96,8 +96,8 @@ const Results = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all ${
                   index === currentSlide
-                    ? 'w-8 bg-amber-400'
-                    : 'bg-stone-700 hover:bg-stone-600'
+                    ? 'w-8 bg-[#E91E8C]'
+                    : 'bg-gray-700 hover:bg-gray-600'
                 }`}
               />
             ))}
@@ -106,7 +106,7 @@ const Results = () => {
             variant="outline"
             size="icon"
             onClick={nextSlide}
-            className="rounded-full border-stone-700 text-stone-400 hover:bg-stone-800 hover:text-white"
+            className="rounded-full border-gray-700 text-gray-400 hover:bg-gray-800 hover:text-white hover:border-[#E91E8C]"
           >
             <ChevronRight size={20} />
           </Button>

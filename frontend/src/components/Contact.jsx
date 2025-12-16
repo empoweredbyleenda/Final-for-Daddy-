@@ -5,18 +5,18 @@ import { businessInfo } from '../data/mock';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-stone-50">
+    <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-amber-600 mb-4">
-            <span className="w-12 h-px bg-amber-600" />
+          <div className="inline-flex items-center gap-2 text-[#E91E8C] mb-4">
+            <span className="w-12 h-px bg-[#E91E8C]" />
             <span className="text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
-            <span className="w-12 h-px bg-amber-600" />
+            <span className="w-12 h-px bg-[#E91E8C]" />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-light text-stone-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
             Visit Us or
-            <span className="block text-amber-600 font-semibold">Book an Appointment</span>
+            <span className="block text-[#E91E8C] font-semibold">Book an Appointment</span>
           </h2>
         </div>
 
@@ -24,28 +24,28 @@ const Contact = () => {
           {/* Contact Info */}
           <div>
             <div className="bg-white rounded-3xl p-8 shadow-sm">
-              <h3 className="text-xl font-semibold text-stone-900 mb-6">Contact Information</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
               
               <div className="space-y-6">
                 {/* Location */}
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-amber-600" size={20} />
+                  <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="text-[#E91E8C]" size={20} />
                   </div>
                   <div>
-                    <p className="font-medium text-stone-900">Location</p>
-                    <p className="text-stone-600">{businessInfo.address}</p>
+                    <p className="font-medium text-gray-900">Location</p>
+                    <p className="text-gray-600">{businessInfo.address}</p>
                   </div>
                 </div>
 
                 {/* Phone */}
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-amber-600" size={20} />
+                  <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="text-[#E91E8C]" size={20} />
                   </div>
                   <div>
-                    <p className="font-medium text-stone-900">Phone</p>
-                    <a href={`tel:${businessInfo.phone}`} className="text-amber-600 hover:underline">
+                    <p className="font-medium text-gray-900">Phone</p>
+                    <a href={`tel:${businessInfo.phone}`} className="text-[#E91E8C] hover:underline">
                       {businessInfo.phone}
                     </a>
                   </div>
@@ -53,12 +53,12 @@ const Contact = () => {
 
                 {/* Email */}
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
-                    <Mail className="text-amber-600" size={20} />
+                  <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="text-[#E91E8C]" size={20} />
                   </div>
                   <div>
-                    <p className="font-medium text-stone-900">Email</p>
-                    <a href={`mailto:${businessInfo.email}`} className="text-amber-600 hover:underline">
+                    <p className="font-medium text-gray-900">Email</p>
+                    <a href={`mailto:${businessInfo.email}`} className="text-[#E91E8C] hover:underline">
                       {businessInfo.email}
                     </a>
                   </div>
@@ -66,26 +66,26 @@ const Contact = () => {
 
                 {/* Hours */}
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
-                    <Clock className="text-amber-600" size={20} />
+                  <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="text-[#E91E8C]" size={20} />
                   </div>
                   <div>
-                    <p className="font-medium text-stone-900">Business Hours</p>
-                    <p className="text-stone-600">{businessInfo.hours.weekday}</p>
-                    <p className="text-stone-600">{businessInfo.hours.weekend}</p>
+                    <p className="font-medium text-gray-900">Business Hours</p>
+                    <p className="text-gray-600">{businessInfo.hours.weekday}</p>
+                    <p className="text-gray-600">{businessInfo.hours.weekend}</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="mt-8 pt-6 border-t border-stone-100">
-                <p className="font-medium text-stone-900 mb-4">Follow Us</p>
+              <div className="mt-8 pt-6 border-t border-gray-100">
+                <p className="font-medium text-gray-900 mb-4">Follow Us</p>
                 <div className="flex gap-4">
                   <a
                     href={businessInfo.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center hover:bg-amber-100 hover:text-amber-600 transition-colors"
+                    className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-[#E91E8C] hover:text-white transition-colors text-gray-600"
                   >
                     <Instagram size={20} />
                   </a>
@@ -93,7 +93,7 @@ const Contact = () => {
                     href={businessInfo.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center hover:bg-amber-100 hover:text-amber-600 transition-colors"
+                    className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-[#E91E8C] hover:text-white transition-colors text-gray-600"
                   >
                     <Facebook size={20} />
                   </a>
@@ -101,7 +101,7 @@ const Contact = () => {
                     href={businessInfo.social.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center hover:bg-amber-100 hover:text-amber-600 transition-colors"
+                    className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-[#E91E8C] hover:text-white transition-colors text-gray-600"
                   >
                     <Youtube size={20} />
                   </a>
@@ -130,12 +130,12 @@ const Contact = () => {
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg flex items-center justify-between">
                 <div>
-                  <p className="font-semibold text-stone-900">Ready to Visit?</p>
-                  <p className="text-sm text-stone-500">Book your appointment now</p>
+                  <p className="font-semibold text-gray-900">Ready to Visit?</p>
+                  <p className="text-sm text-gray-500">Book your appointment now</p>
                 </div>
                 <Button
                   asChild
-                  className="bg-amber-500 hover:bg-amber-600 text-white rounded-full"
+                  className="bg-[#E91E8C] hover:bg-[#d11a7d] text-white rounded-full"
                 >
                   <a href={businessInfo.bookingUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} className="mr-2" />
