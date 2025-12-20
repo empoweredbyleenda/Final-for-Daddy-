@@ -138,8 +138,12 @@ const LandingPage = () => {
                 // Lead Capture Form
                 <div className="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl">
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-[#E91E8C] rounded-full flex items-center justify-center">
-                      <Gift className="text-white" size={28} />
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden bg-black flex items-center justify-center">
+                      <img 
+                        src="https://www.snatchedbeauties.la/wp-content/uploads/2024/08/IMG_7761-692x1024.jpeg" 
+                        alt="Snatched Beauties" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h2 className="text-2xl font-bold text-gray-900">Claim Your Discount</h2>
                     <p className="text-gray-500 mt-2">Enter your info to get your exclusive coupon</p>
