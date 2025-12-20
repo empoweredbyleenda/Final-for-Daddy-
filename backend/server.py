@@ -39,6 +39,29 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+# Lead Capture Models
+class LeadCreate(BaseModel):
+    email: EmailStr
+    name: Optional[str] = None
+
+class LeadResponse(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    email: str
+    name: Optional[str] = None
+    coupon_code: str
+    discount: str = "15%"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    expires_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc) + timedelta(days=30))
+    used: bool = False
+
+def generate_coupon_code():
+    """Generate a unique coupon code like SNATCH-XXXX"""
+    chars = string.ascii_uppercase + string.digits
+    random_part = ''.join(random.choices(chars, k=6))
+    return f"SNATCH-{random_part}"
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
