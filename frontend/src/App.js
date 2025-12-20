@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,16 +12,17 @@ import LeadCapture from './components/LeadCapture';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CouponModal from './components/CouponModal';
+import LandingPage from './components/LandingPage';
 import axios from 'axios';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-function App() {
+// Main Website Homepage
+const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [couponData, setCouponData] = useState(null);
-  const [hasSeenModal, setHasSeenModal] = useState(false);
 
   // Show modal after 5 seconds if user hasn't seen it
   useEffect(() => {
@@ -28,11 +30,8 @@ function App() {
     if (!hasSeenBefore) {
       const timer = setTimeout(() => {
         setShowModal(true);
-        setHasSeenModal(true);
       }, 5000);
       return () => clearTimeout(timer);
-    } else {
-      setHasSeenModal(true);
     }
   }, []);
 
@@ -53,7 +52,6 @@ function App() {
       localStorage.setItem('snatchedBeautiesModalSeen', 'true');
     } catch (error) {
       console.error('Error submitting lead:', error);
-      // If there's an error, generate a local coupon as fallback
       const fallbackCode = 'SNATCHED15';
       setCouponData({
         couponCode: fallbackCode,
@@ -70,7 +68,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <Header />
       <main>
         <Hero />
@@ -84,7 +82,6 @@ function App() {
       </main>
       <Footer />
 
-      {/* Coupon Modal */}
       <CouponModal
         isOpen={showModal}
         onClose={handleCloseModal}
@@ -92,6 +89,25 @@ function App() {
         isLoading={isLoading}
         couponData={couponData}
       />
+    </>
+  );
+};
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          {/* Main website */}
+          <Route path="/" element={<HomePage />} />
+          
+          {/* Dedicated Landing Page for ads/campaigns */}
+          <Route path="/offer" element={<LandingPage />} />
+          <Route path="/promo" element={<LandingPage />} />
+          <Route path="/discount" element={<LandingPage />} />
+          <Route path="/15off" element={<LandingPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
