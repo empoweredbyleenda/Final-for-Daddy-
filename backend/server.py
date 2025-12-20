@@ -43,6 +43,7 @@ class StatusCheckCreate(BaseModel):
 class LeadCreate(BaseModel):
     email: EmailStr
     name: Optional[str] = None
+    phone: Optional[str] = None
 
 class LeadResponse(BaseModel):
     model_config = ConfigDict(extra="ignore")
@@ -50,6 +51,7 @@ class LeadResponse(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     email: str
     name: Optional[str] = None
+    phone: Optional[str] = None
     coupon_code: str
     discount: str = "15%"
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
