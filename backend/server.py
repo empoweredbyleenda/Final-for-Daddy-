@@ -91,6 +91,79 @@ async def get_status_checks():
     
     return status_checks
 
+# Lead Capture Endpoints
+@api_router.post("/leads")
+async def create_lead(lead_input: LeadCreate):
+    """Create a new lead and generate a coupon code"""
+    # Check if email already exists
+    existing_lead = await db.leads.find_one({"email": lead_input.email})
+    
+    if existing_lead:
+        # Return existing coupon if email already registered
+        return {
+            "id": existing_lead.get("id"),
+            "email": existing_lead.get("email"),
+            "name": existing_lead.get("name"),
+            "couponCode": existing_lead.get("coupon_code"),
+            "discount": existing_lead.get("discount", "15%"),
+            "message": "Welcome back! Here's your existing coupon."
+        }
+    
+    # Generate new coupon code
+    coupon_code = generate_coupon_code()
+    
+    # Create lead document
+    lead = LeadResponse(
+        email=lead_input.email,
+        name=lead_input.name,
+        coupon_code=coupon_code
+    )
+    
+    # Convert to dict for MongoDB
+    doc = lead.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    doc['expires_at'] = doc['expires_at'].isoformat()
+    
+    # Save to database
+    await db.leads.insert_one(doc)
+    
+    logger.info(f"New lead created: {lead_input.email} with coupon {coupon_code}")
+    
+    return {
+        "id": lead.id,
+        "email": lead.email,
+        "name": lead.name,
+        "couponCode": lead.coupon_code,
+        "discount": lead.discount,
+        "expiresAt": lead.expires_at.isoformat(),
+        "message": "Success! Here's your exclusive discount code."
+    }
+
+@api_router.get("/leads")
+async def get_all_leads():
+    """Get all leads (admin endpoint)"""
+    leads = await db.leads.find({}, {"_id": 0}).to_list(1000)
+    return {"leads": leads, "total": len(leads)}
+
+@api_router.get("/leads/stats")
+async def get_lead_stats():
+    """Get lead statistics"""
+    total_leads = await db.leads.count_documents({})
+    used_coupons = await db.leads.count_documents({"used": True})
+    
+    # Get leads from last 7 days
+    seven_days_ago = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+    recent_leads = await db.leads.count_documents({
+        "created_at": {"$gte": seven_days_ago}
+    })
+    
+    return {
+        "totalLeads": total_leads,
+        "usedCoupons": used_coupons,
+        "recentLeads": recent_leads,
+        "conversionRate": f"{(used_coupons / total_leads * 100):.1f}%" if total_leads > 0 else "0%"
+    }
+
 # Include the router in the main app
 app.include_router(api_router)
 
