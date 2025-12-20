@@ -118,6 +118,7 @@ async def create_lead(lead_input: LeadCreate):
     lead = LeadResponse(
         email=lead_input.email,
         name=lead_input.name,
+        phone=lead_input.phone,
         coupon_code=coupon_code
     )
     
