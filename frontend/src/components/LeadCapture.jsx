@@ -21,47 +21,54 @@ const LeadCapture = ({ onSubmit, isLoading }) => {
   };
 
   return (
-    <section className="py-20 bg-[#E91E8C] relative overflow-hidden">
+    <section className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 border-2 border-white rounded-full" />
-        <div className="absolute bottom-10 right-10 w-48 h-48 border-2 border-white rounded-full" />
-        <div className="absolute top-1/2 left-1/4 w-20 h-20 border border-white rounded-full" />
+        <div className="absolute top-10 left-10 w-32 h-32 border-2 border-[#E91E8C] rounded-full" />
+        <div className="absolute bottom-10 right-10 w-48 h-48 border-2 border-[#E91E8C] rounded-full" />
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 border border-[#E91E8C] rounded-full" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="bg-[#E91E8C] rounded-3xl p-8 md:p-12 shadow-2xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Content */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#E91E8C]/10 px-4 py-2 rounded-full mb-4">
-                <Gift className="text-[#E91E8C]" size={18} />
-                <span className="text-[#E91E8C] font-semibold text-sm">EXCLUSIVE OFFER</span>
+              {/* Logo */}
+              <img 
+                src="/logo.png" 
+                alt="Snatched Beauties" 
+                className="h-24 w-auto mb-6"
+              />
+              
+              <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-4">
+                <Gift className="text-white" size={18} />
+                <span className="text-white font-semibold text-sm">EXCLUSIVE OFFER</span>
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Get <span className="text-[#E91E8C]">15% OFF</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Get <span className="text-black">15% OFF</span>
                 <br />Your First Visit!
               </h2>
               
-              <p className="text-gray-600 mb-6">
+              <p className="text-white/90 mb-6">
                 Join our VIP list and receive an exclusive discount code for your first body sculpting treatment. Plus, get beauty tips and special offers!
               </p>
 
-              <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-4 text-sm text-white/80">
                 <div className="flex items-center gap-2">
-                  <Sparkles size={16} className="text-[#E91E8C]" />
+                  <Sparkles size={16} className="text-white" />
                   <span>Instant delivery</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Sparkles size={16} className="text-[#E91E8C]" />
+                  <Sparkles size={16} className="text-white" />
                   <span>No spam, ever</span>
                 </div>
               </div>
             </div>
 
             {/* Right - Form */}
-            <div>
+            <div className="bg-white rounded-2xl p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
@@ -93,7 +100,7 @@ const LeadCapture = ({ onSubmit, isLoading }) => {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-[#E91E8C] hover:bg-[#d11a7d] text-white py-6 rounded-xl font-semibold text-lg group"
+                  className="w-full bg-black hover:bg-zinc-800 text-white py-6 rounded-xl font-semibold text-lg group"
                 >
                   {isLoading ? (
                     'Getting Your Coupon...'
