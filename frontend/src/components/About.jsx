@@ -26,7 +26,7 @@ const About = () => {
           {/* Left Column - Text */}
           <div>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Snatched Beauties is a premier body sculpting studio in Los Angeles, 
+              Snatched Beauties is a premier body sculpting destination in Los Angeles, 
               known for delivering transformative results through non-invasive treatments 
               that require zero downtime.
             </p>
@@ -36,10 +36,15 @@ const About = () => {
               as a trusted partner in helping clients achieve their body goals safely 
               and effectively.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed mb-6">
               Led by Leenda, our certified body sculptor practitioner, we combine 
               expertise with genuine care to ensure every client feels comfortable, 
               confident, and excited about their transformation journey.
+            </p>
+            <p className="text-gray-400 leading-relaxed">
+              We also offer <span className="text-[#E91E8C] font-medium">professional training courses</span> locally 
+              and worldwide, having trained thousands of aspiring body sculpting practitioners. 
+              No experience needed to start your journey.
             </p>
           </div>
 
@@ -58,14 +63,18 @@ const About = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-zinc-800">
+            <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-zinc-800">
               <div>
-                <p className="text-4xl font-light text-white">5+</p>
-                <p className="text-gray-500 text-sm">Years Experience</p>
+                <p className="text-3xl font-light text-white">5+</p>
+                <p className="text-gray-500 text-xs">Years Experience</p>
               </div>
               <div>
-                <p className="text-4xl font-light text-white">100+</p>
-                <p className="text-gray-500 text-sm">Happy Clients</p>
+                <p className="text-3xl font-light text-white">5,000+</p>
+                <p className="text-gray-500 text-xs">Treatments</p>
+              </div>
+              <div>
+                <p className="text-3xl font-light text-white">1,000+</p>
+                <p className="text-gray-500 text-xs">Trained Worldwide</p>
               </div>
             </div>
           </div>

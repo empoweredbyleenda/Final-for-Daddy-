@@ -29,7 +29,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto mb-10">
-            Premier non-invasive body sculpting studio delivering real results with zero downtime
+            Premier non-invasive body sculpting delivering real results with zero downtime
           </p>
 
           {/* CTA Buttons */}
@@ -67,7 +67,7 @@ const Hero = () => {
                 <p className="text-gray-500 text-sm mt-1">Happy Clients</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl sm:text-5xl font-light text-white">500+</p>
+                <p className="text-4xl sm:text-5xl font-light text-white">5,000+</p>
                 <p className="text-gray-500 text-sm mt-1">Treatments Done</p>
               </div>
             </div>
