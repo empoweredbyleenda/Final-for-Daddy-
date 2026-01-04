@@ -1,38 +1,79 @@
-# Test Results - Snatched Beauties Website Redesign
+# Test Results - Snatched Beauties Website
 
 ## Test Scope
-Testing the DNA Group-inspired redesign of Snatched Beauties website with:
-- New header, hero, services, about, results, contact, and footer sections
-- Preserved coupon landing page at /offer route
-- Hot pink (#E91E8C), black, white color scheme
+Comprehensive testing of the redesigned Snatched Beauties website including:
+- All navigation links and smooth scrolling
+- All external links (Book Now, Social Media, Email, Phone)
+- Lead capture forms (homepage coupon + /offer landing page)
+- Backend API endpoints for lead capture
+- Mobile responsiveness
+- Contact form submission
+- Coupon code generation
+
+## Frontend URL
+http://localhost:3000
+
+## Backend API
+Check REACT_APP_BACKEND_URL in /app/frontend/.env
 
 ## Test Cases
 
-### 1. Homepage Tests
-- [ ] Homepage loads correctly
-- [ ] Header with SB logo, nav links, and Book Now button visible
-- [ ] Hero section with large SNATCHED BEAUTIES title and stats (5+, 100+, 500+)
-- [ ] Services section with 6 dark service cards
-- [ ] About section with 2-column layout and expertise list
-- [ ] Results section with 4 testimonial cards
-- [ ] Contact section with form and contact info
-- [ ] Footer with social links
+### 1. Homepage Navigation
+- [ ] Header logo links to #home
+- [ ] Services nav link scrolls to #services section
+- [ ] About nav link scrolls to #about section
+- [ ] Results nav link scrolls to #results section
+- [ ] Contact nav link scrolls to #contact section
+- [ ] Book Now button opens https://www.snatchedbeauties.la/book-appointment/
 
-### 2. Navigation Tests
-- [ ] All nav links scroll to correct sections
-- [ ] Book Now button opens booking URL in new tab
-- [ ] Mobile menu works on smaller screens
+### 2. Homepage Sections
+- [ ] Hero section displays logo, tagline, stats (5+, 100+, 5,000+)
+- [ ] Services section shows 6 pink cards with uniform logos
+- [ ] Coupon capture section displays with logo and form
+- [ ] About section shows expertise list and stats
+- [ ] Results section shows 4 testimonial cards
+- [ ] Contact section shows form and contact info
+- [ ] Footer shows logo, nav links, social icons
 
-### 3. Lead Capture Landing Page (/offer)
-- [ ] Landing page loads at /offer route
-- [ ] Form accepts name, email, phone
+### 3. Lead Capture Form (Homepage)
+- [ ] Name field accepts input
+- [ ] Email field accepts input and validates
+- [ ] Submit button triggers API call
+- [ ] Success shows coupon code modal
+
+### 4. Landing Page (/offer)
+- [ ] Page loads correctly
+- [ ] Form displays with Name, Email, Phone fields
 - [ ] Submit generates coupon code
-- [ ] Success modal shows coupon
+- [ ] Coupon code displayed after submission
 
-### 4. Backend API Tests
-- [ ] POST /api/leads creates lead and returns coupon
-- [ ] GET /api/leads returns list of leads
+### 5. Contact Form
+- [ ] Full Name field accepts input
+- [ ] Email field accepts input
+- [ ] Phone field accepts input
+- [ ] Message field accepts input
+- [ ] Submit sends data to backend
+- [ ] Success message displayed
 
-## Test Environment
-- Frontend: http://localhost:3000
-- Backend API: Check REACT_APP_BACKEND_URL
+### 6. External Links
+- [ ] Instagram link opens correct URL
+- [ ] Facebook link opens correct URL
+- [ ] YouTube link opens correct URL
+- [ ] Email link has correct mailto:
+- [ ] Phone link has correct tel:
+
+### 7. Backend API Tests
+- [ ] POST /api/leads - creates lead and returns coupon
+- [ ] GET /api/leads - returns list of leads
+- [ ] GET /api/ - health check returns OK
+
+### 8. Mobile Responsiveness
+- [ ] Header shows hamburger menu on mobile
+- [ ] Mobile menu opens and shows nav links
+- [ ] All sections stack properly on mobile
+- [ ] Forms are usable on mobile
+
+## Incorporate User Feedback
+- Test all form submissions end-to-end
+- Verify coupon codes are generated correctly
+- Check all links open in correct tabs
