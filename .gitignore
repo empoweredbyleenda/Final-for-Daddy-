@@ -80,3 +80,7 @@ agenthub/agents/youtube/db
 android-sdk/ -e 
 # Environment files
 # Note: .env files are committed for deployment configuration
+-e 
+# Environment files
+*.env
+*.env.*
