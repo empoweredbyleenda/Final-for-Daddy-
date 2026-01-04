@@ -1,7 +1,6 @@
 import React from 'react';
-import { Waves, Zap, TrendingUp, Sparkles, Heart, TreeDeciduous, Droplets, Scale, ArrowRight } from 'lucide-react';
-import { Button } from './ui/button';
-import { services, businessInfo } from '../data/mock';
+import { Waves, Zap, TrendingUp, Sparkles, Heart, TreePine, Droplets, Scale } from 'lucide-react';
+import { services } from '../data/mock';
 
 const iconMap = {
   Waves,
@@ -9,67 +8,53 @@ const iconMap = {
   TrendingUp,
   Sparkles,
   Heart,
-  TreeDeciduous,
+  TreeDeciduous: TreePine,
   Droplets,
   Scale
 };
 
 const Services = () => {
+  // Display first 6 services in the grid
+  const displayServices = services.slice(0, 6);
+
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-[#E91E8C] mb-4">
-            <span className="w-12 h-px bg-[#E91E8C]" />
-            <span className="text-sm font-semibold tracking-wider uppercase">Our Services</span>
-            <span className="w-12 h-px bg-[#E91E8C]" />
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
-            Non-Invasive Body Sculpting
-            <span className="block text-[#E91E8C] font-semibold">Treatments</span>
+        <div className="mb-16">
+          <p className="text-[#E91E8C] text-sm font-medium tracking-widest uppercase mb-4">
+            WHAT WE DO
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Body Sculpting Services
           </h2>
-          <p className="text-gray-600 text-lg">
-            Discover the power of surgery-free, anesthesia-free treatments with zero downtime. 
-            Your safety is our priority.
+          <p className="text-gray-600 text-lg max-w-2xl">
+            Comprehensive non-invasive treatments tailored to transform your body, 
+            boost confidence, and deliver lasting results without surgery.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => {
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {displayServices.map((service) => {
             const Icon = iconMap[service.icon] || Sparkles;
             return (
               <div
                 key={service.id}
-                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-[#E91E8C]/30"
+                className="group bg-zinc-900 rounded-2xl p-8 hover:bg-zinc-800 transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-xl bg-zinc-800 group-hover:bg-zinc-700 flex items-center justify-center mb-6 transition-colors">
                   <Icon className="text-[#E91E8C]" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-gray-400 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
             );
           })}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button
-            asChild
-            size="lg"
-            className="bg-black hover:bg-gray-900 text-white px-8 py-6 rounded-full group"
-          >
-            <a href={businessInfo.bookingUrl} target="_blank" rel="noopener noreferrer">
-              View All Services & Pricing
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-            </a>
-          </Button>
         </div>
       </div>
     </section>
