@@ -58,7 +58,7 @@
                     &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
                     sans-serif !important;
                 font-size: 12px !important;
-                z-index: 9999 !important;
+                z-index: 99999 !important;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
                 border-radius: 8px !important;
                 background-color: #E91E8C !important;
@@ -88,6 +88,19 @@
                 </p>
             </div>
         </a>
+        <script>
+            // Remove emergent badge
+            function removeEmergentBadge() {
+                const badge = document.getElementById('emergent-badge');
+                if (badge) badge.remove();
+                const badges = document.querySelectorAll('a[href*="emergent"]');
+                badges.forEach(b => b.remove());
+            }
+            document.addEventListener('DOMContentLoaded', removeEmergentBadge);
+            setTimeout(removeEmergentBadge, 500);
+            setTimeout(removeEmergentBadge, 1000);
+            setTimeout(removeEmergentBadge, 2000);
+        </script>
         <script>
             !(function (t, e) {
                 var o, n, p, r;
