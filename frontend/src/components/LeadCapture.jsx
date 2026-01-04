@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gift, Mail, ArrowRight, Sparkles } from 'lucide-react';
+import { Mail, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 
@@ -38,11 +38,11 @@ const LeadCapture = ({ onSubmit, isLoading }) => {
               <img 
                 src="/logo.png" 
                 alt="Snatched Beauties" 
-                className="h-24 w-auto mb-6"
+                className="h-28 w-auto mb-6"
               />
               
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-4">
-                <Gift className="text-white" size={18} />
+                <img src="/logo.png" alt="" className="w-5 h-5 object-contain" />
                 <span className="text-white font-semibold text-sm">EXCLUSIVE OFFER</span>
               </div>
               

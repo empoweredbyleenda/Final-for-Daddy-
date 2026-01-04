@@ -1,17 +1,5 @@
 import React from 'react';
-import { Waves, Zap, TrendingUp, Sparkles, Heart, TreePine, Droplets, Scale } from 'lucide-react';
 import { services } from '../data/mock';
-
-const iconMap = {
-  Waves,
-  Zap,
-  TrendingUp,
-  Sparkles,
-  Heart,
-  TreeDeciduous: TreePine,
-  Droplets,
-  Scale
-};
 
 const Services = () => {
   // Display first 6 services in the grid
@@ -41,25 +29,26 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayServices.map((service) => {
-            const Icon = iconMap[service.icon] || Sparkles;
-            return (
-              <div
-                key={service.id}
-                className="group bg-[#E91E8C] rounded-2xl p-8 hover:bg-[#d11a7d] transition-all duration-300 hover:-translate-y-1 shadow-lg"
-              >
-                <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center mb-6 group-hover:bg-white/30 transition-colors">
-                  <Icon className="text-white" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  {service.description}
-                </p>
+          {displayServices.map((service) => (
+            <div
+              key={service.id}
+              className="group bg-pink-200 rounded-2xl p-8 hover:bg-pink-300 transition-all duration-300 hover:-translate-y-1 shadow-md"
+            >
+              <div className="w-14 h-14 rounded-xl bg-white/60 flex items-center justify-center mb-6 group-hover:bg-white/80 transition-colors overflow-hidden">
+                <img 
+                  src="/logo.png" 
+                  alt="" 
+                  className="w-10 h-10 object-contain"
+                />
               </div>
-            );
-          })}
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {service.title}
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
