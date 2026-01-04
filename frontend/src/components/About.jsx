@@ -44,7 +44,7 @@ const About = () => {
             <p className="text-gray-400 leading-relaxed">
               We also offer <span className="text-[#E91E8C] font-medium">professional training courses</span> locally 
               and worldwide, having trained thousands of aspiring body sculpting practitioners. 
-              No experience needed to start your journey.
+              <span className="text-white font-bold">No experience required.</span>
             </p>
           </div>
 
