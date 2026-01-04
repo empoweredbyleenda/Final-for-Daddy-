@@ -42,7 +42,6 @@ const LeadCapture = ({ onSubmit, isLoading }) => {
               />
               
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-4">
-                <img src="/logo.png" alt="" className="w-5 h-5 object-contain" />
                 <span className="text-white font-semibold text-sm">EXCLUSIVE OFFER</span>
               </div>
               
