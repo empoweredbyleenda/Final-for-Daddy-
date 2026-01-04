@@ -34,12 +34,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-[#E91E8C] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">SB</span>
-            </div>
-            <span className="text-white text-lg font-medium tracking-wide">
-              Snatched Beauties
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="Snatched Beauties" 
+              className="h-14 w-auto"
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -48,7 +47,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm text-gray-300 hover:text-white transition-colors"
+                className="text-sm text-gray-300 hover:text-[#E91E8C] transition-colors"
               >
                 {link.name}
               </a>
@@ -59,7 +58,7 @@ const Header = () => {
           <div className="hidden lg:block">
             <Button
               asChild
-              className="bg-white hover:bg-gray-100 text-black px-6 py-2 rounded-full font-medium"
+              className="bg-[#E91E8C] hover:bg-[#d11a7d] text-white px-6 py-2 rounded-full font-medium"
             >
               <a href={businessInfo.bookingUrl} target="_blank" rel="noopener noreferrer">
                 Book Now
@@ -85,7 +84,7 @@ const Header = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-gray-300 hover:text-white py-2 transition-colors"
+                  className="text-gray-300 hover:text-[#E91E8C] py-2 transition-colors"
                 >
                   {link.name}
                 </a>
@@ -93,7 +92,7 @@ const Header = () => {
               <hr className="border-zinc-700" />
               <Button
                 asChild
-                className="bg-white hover:bg-gray-100 text-black rounded-full w-full"
+                className="bg-[#E91E8C] hover:bg-[#d11a7d] text-white rounded-full w-full"
               >
                 <a href={businessInfo.bookingUrl} target="_blank" rel="noopener noreferrer">
                   Book Now

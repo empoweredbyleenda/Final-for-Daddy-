@@ -5,7 +5,7 @@ import { businessInfo } from '../data/mock';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-black overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center bg-zinc-900 overflow-hidden">
       {/* Subtle background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-2 h-2 bg-[#E91E8C]/40 rounded-full" />
@@ -17,18 +17,22 @@ const Hero = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
         <div className="text-center">
-          {/* Main Title */}
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white tracking-tight mb-6">
-            SNATCHED BEAUTIES
-          </h1>
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/logo.png" 
+              alt="Snatched Beauties" 
+              className="h-40 sm:h-48 lg:h-56 w-auto"
+            />
+          </div>
 
           {/* Tagline */}
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-400 italic mb-4">
+          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 italic mb-4">
             Transform Your Body. Elevate Your Confidence.
           </p>
 
           {/* Description */}
-          <p className="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-10">
             Premier non-invasive body sculpting delivering real results with zero downtime
           </p>
 
@@ -37,7 +41,7 @@ const Hero = () => {
             <Button
               asChild
               size="lg"
-              className="bg-white hover:bg-gray-100 text-black px-8 py-6 rounded-full font-medium group"
+              className="bg-[#E91E8C] hover:bg-[#d11a7d] text-white px-8 py-6 rounded-full font-medium group"
             >
               <a href="#contact">
                 Book Consultation
@@ -48,36 +52,30 @@ const Hero = () => {
               asChild
               variant="outline"
               size="lg"
-              className="border-zinc-700 text-white hover:bg-zinc-900 px-8 py-6 rounded-full font-medium"
+              className="border-[#E91E8C]/50 text-white hover:bg-[#E91E8C]/10 px-8 py-6 rounded-full font-medium"
             >
               <a href="#services">Explore Services</a>
             </Button>
           </div>
 
           {/* Stats Row */}
-          <div className="border-t border-zinc-800 pt-12 mt-8">
+          <div className="border-t border-zinc-700 pt-12 mt-8">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
               <div className="text-center">
                 <p className="text-4xl sm:text-5xl font-light text-white">5+</p>
-                <p className="text-gray-500 text-sm mt-1">Years Experience</p>
+                <p className="text-gray-400 text-sm mt-1">Years Experience</p>
               </div>
-              <div className="text-center relative">
-                <span className="hidden sm:block absolute -top-6 left-1/2 -translate-x-1/2 text-[#E91E8C] text-xs tracking-widest">SCROLL</span>
+              <div className="text-center">
                 <p className="text-4xl sm:text-5xl font-light text-white">100+</p>
-                <p className="text-gray-500 text-sm mt-1">Happy Clients</p>
+                <p className="text-gray-400 text-sm mt-1">Happy Clients</p>
               </div>
               <div className="text-center">
                 <p className="text-4xl sm:text-5xl font-light text-white">5,000+</p>
-                <p className="text-gray-500 text-sm mt-1">Treatments Done</p>
+                <p className="text-gray-400 text-sm mt-1">Treatments Done</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <p className="text-gray-600 text-xs tracking-widest mb-2">Scroll</p>
       </div>
     </section>
   );

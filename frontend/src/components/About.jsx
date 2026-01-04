@@ -12,15 +12,22 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-zinc-950">
+    <section id="about" className="py-24 bg-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <p className="text-[#E91E8C] text-sm font-medium tracking-widest uppercase mb-4">
-          ABOUT US
-        </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-12">
-          About
-        </h2>
+        <div className="text-center mb-12">
+          <img 
+            src="/logo.png" 
+            alt="Snatched Beauties" 
+            className="h-24 w-auto mx-auto mb-6"
+          />
+          <p className="text-[#E91E8C] text-sm font-medium tracking-widest uppercase mb-4">
+            ABOUT US
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            About
+          </h2>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column - Text */}
@@ -49,7 +56,7 @@ const About = () => {
           </div>
 
           {/* Right Column - Expertise */}
-          <div className="bg-zinc-900 rounded-2xl p-8">
+          <div className="bg-zinc-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-semibold text-white mb-8">
               Areas of Expertise
             </h3>
@@ -63,18 +70,18 @@ const About = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-zinc-800">
+            <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-zinc-600">
               <div>
                 <p className="text-3xl font-light text-white">5+</p>
-                <p className="text-gray-500 text-xs">Years Experience</p>
+                <p className="text-gray-400 text-xs">Years Experience</p>
               </div>
               <div>
                 <p className="text-3xl font-light text-white">5,000+</p>
-                <p className="text-gray-500 text-xs">Treatments</p>
+                <p className="text-gray-400 text-xs">Treatments</p>
               </div>
               <div>
                 <p className="text-3xl font-light text-white">1,000+</p>
-                <p className="text-gray-500 text-xs">Trained Worldwide</p>
+                <p className="text-gray-400 text-xs">Trained Worldwide</p>
               </div>
             </div>
           </div>

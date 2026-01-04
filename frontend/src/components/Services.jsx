@@ -18,17 +18,22 @@ const Services = () => {
   const displayServices = services.slice(0, 6);
 
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-24 bg-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16">
+        <div className="text-center mb-16">
+          <img 
+            src="/logo.png" 
+            alt="Snatched Beauties" 
+            className="h-20 w-auto mx-auto mb-6"
+          />
           <p className="text-[#E91E8C] text-sm font-medium tracking-widest uppercase mb-4">
             WHAT WE DO
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Body Sculpting Services
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Comprehensive non-invasive treatments tailored to transform your body, 
             boost confidence, and deliver lasting results without surgery.
           </p>
@@ -41,15 +46,15 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="group bg-zinc-900 rounded-2xl p-8 hover:bg-zinc-800 transition-all duration-300"
+                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-pink-100"
               >
-                <div className="w-14 h-14 rounded-xl bg-zinc-800 group-hover:bg-zinc-700 flex items-center justify-center mb-6 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-[#E91E8C]/10 flex items-center justify-center mb-6 group-hover:bg-[#E91E8C]/20 transition-colors">
                   <Icon className="text-[#E91E8C]" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>

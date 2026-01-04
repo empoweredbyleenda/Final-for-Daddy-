@@ -45,8 +45,17 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-zinc-950">
+    <section id="contact" className="py-24 bg-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <img 
+            src="/logo.png" 
+            alt="Snatched Beauties" 
+            className="h-24 w-auto mx-auto mb-6"
+          />
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column - Info */}
           <div>
@@ -64,7 +73,7 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/20 flex items-center justify-center flex-shrink-0">
                   <MapPin className="text-[#E91E8C]" size={20} />
                 </div>
                 <div>
@@ -74,7 +83,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/20 flex items-center justify-center flex-shrink-0">
                   <Mail className="text-[#E91E8C]" size={20} />
                 </div>
                 <div>
@@ -86,7 +95,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#E91E8C]/20 flex items-center justify-center flex-shrink-0">
                   <Phone className="text-[#E91E8C]" size={20} />
                 </div>
                 <div>
@@ -100,7 +109,7 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-zinc-900 rounded-2xl p-8">
+          <div className="bg-zinc-700/50 rounded-2xl p-8">
             {submitStatus === 'success' ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 rounded-full bg-[#E91E8C]/20 flex items-center justify-center mx-auto mb-4">
@@ -112,7 +121,7 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-gray-400 text-sm mb-2">Full Name</label>
+                  <label className="block text-gray-300 text-sm mb-2">Full Name</label>
                   <input
                     type="text"
                     name="name"
@@ -120,12 +129,12 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Jane Smith"
                     required
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#E91E8C] transition-colors"
+                    className="w-full bg-zinc-600 border border-zinc-500 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#E91E8C] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 text-sm mb-2">Email Address</label>
+                  <label className="block text-gray-300 text-sm mb-2">Email Address</label>
                   <input
                     type="email"
                     name="email"
@@ -133,31 +142,31 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="jane@example.com"
                     required
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#E91E8C] transition-colors"
+                    className="w-full bg-zinc-600 border border-zinc-500 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#E91E8C] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 text-sm mb-2">Phone Number</label>
+                  <label className="block text-gray-300 text-sm mb-2">Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="(323) 555-0123"
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#E91E8C] transition-colors"
+                    className="w-full bg-zinc-600 border border-zinc-500 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#E91E8C] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 text-sm mb-2">Message (Optional)</label>
+                  <label className="block text-gray-300 text-sm mb-2">Message (Optional)</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your goals..."
                     rows={4}
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#E91E8C] transition-colors resize-none"
+                    className="w-full bg-zinc-600 border border-zinc-500 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#E91E8C] transition-colors resize-none"
                   />
                 </div>
 

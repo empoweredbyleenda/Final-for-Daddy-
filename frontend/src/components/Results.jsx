@@ -7,17 +7,22 @@ const Results = () => {
   const displayTestimonials = testimonials.slice(0, 4);
 
   return (
-    <section id="results" className="py-24 bg-white">
+    <section id="results" className="py-24 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16">
+        <div className="text-center mb-16">
+          <img 
+            src="/logo.png" 
+            alt="Snatched Beauties" 
+            className="h-20 w-auto mx-auto mb-6"
+          />
           <p className="text-[#E91E8C] text-sm font-medium tracking-widest uppercase mb-4">
             TESTIMONIALS
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Client Results
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Real stories from real clients who have experienced transformative results 
             with our body sculpting treatments.
           </p>
@@ -28,7 +33,7 @@ const Results = () => {
           {displayTestimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-zinc-900 rounded-2xl p-8"
+              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-6">
@@ -38,7 +43,7 @@ const Results = () => {
               </div>
               
               {/* Quote */}
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-6">
                 "{testimonial.text}"
               </p>
               
@@ -49,7 +54,7 @@ const Results = () => {
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
-                <span className="text-white font-medium">{testimonial.name}</span>
+                <span className="text-gray-900 font-medium">{testimonial.name}</span>
               </div>
             </div>
           ))}

@@ -4,31 +4,30 @@ import { businessInfo } from '../data/mock';
 
 const Footer = () => {
   return (
-    <footer className="bg-black border-t border-zinc-900">
+    <footer className="bg-zinc-900 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-[#E91E8C] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">SB</span>
-            </div>
-            <span className="text-white text-lg font-medium">
-              Snatched Beauties
-            </span>
-          </div>
+          <a href="#home" className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Snatched Beauties" 
+              className="h-16 w-auto"
+            />
+          </a>
 
           {/* Links */}
           <div className="flex items-center gap-8">
-            <a href="#services" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#services" className="text-gray-400 hover:text-[#E91E8C] text-sm transition-colors">
               Services
             </a>
-            <a href="#about" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#about" className="text-gray-400 hover:text-[#E91E8C] text-sm transition-colors">
               About
             </a>
-            <a href="#results" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#results" className="text-gray-400 hover:text-[#E91E8C] text-sm transition-colors">
               Results
             </a>
-            <a href="#contact" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#contact" className="text-gray-400 hover:text-[#E91E8C] text-sm transition-colors">
               Contact
             </a>
           </div>
@@ -39,7 +38,7 @@ const Footer = () => {
               href={businessInfo.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center text-gray-400 hover:text-[#E91E8C] hover:bg-zinc-800 transition-colors"
+              className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center text-gray-400 hover:text-[#E91E8C] hover:bg-zinc-700 transition-colors"
             >
               <Instagram size={18} />
             </a>
@@ -47,7 +46,7 @@ const Footer = () => {
               href={businessInfo.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center text-gray-400 hover:text-[#E91E8C] hover:bg-zinc-800 transition-colors"
+              className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center text-gray-400 hover:text-[#E91E8C] hover:bg-zinc-700 transition-colors"
             >
               <Facebook size={18} />
             </a>
@@ -55,7 +54,7 @@ const Footer = () => {
               href={businessInfo.social.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center text-gray-400 hover:text-[#E91E8C] hover:bg-zinc-800 transition-colors"
+              className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center text-gray-400 hover:text-[#E91E8C] hover:bg-zinc-700 transition-colors"
             >
               <Youtube size={18} />
             </a>
@@ -63,7 +62,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-zinc-900 mt-8 pt-8 text-center">
+        <div className="border-t border-zinc-800 mt-8 pt-8 text-center">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Snatched Beauties. All rights reserved.
           </p>
