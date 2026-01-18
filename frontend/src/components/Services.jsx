@@ -52,10 +52,10 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Our <span className="text-pink-600">Premium</span> Services
+            Our <span className="text-pink-600">Non-Invasive</span> Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your beauty with our professional treatments designed to enhance your natural radiance
+            Transform your body with our advanced, surgery-free treatments designed to sculpt and enhance your natural beauty
           </p>
         </div>
 
