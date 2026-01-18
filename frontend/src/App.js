@@ -97,14 +97,35 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* Main website */}
-          <Route path="/" element={<HomePage />} />
+          {/* Payment Success Page */}
+          <Route path="/payment/success" element={<PaymentSuccess />} />
           
-          {/* Dedicated Landing Page for ads/campaigns */}
+          {/* Payment Cancel Page */}
+          <Route path="/payment/cancel" element={<PaymentCancel />} />
+          
+          {/* Landing Page */}
           <Route path="/offer" element={<LandingPage />} />
-          <Route path="/promo" element={<LandingPage />} />
-          <Route path="/discount" element={<LandingPage />} />
-          <Route path="/15off" element={<LandingPage />} />
+          
+          {/* Main Website Homepage */}
+          <Route path="/" element={
+            <>
+              <Header />
+              <Hero />
+              <Services />
+              <LeadCapture 
+                showModal={showModal}
+                onCloseModal={handleCloseModal}
+                isLoading={isLoading}
+                onSubmitLead={handleSubmitLead}
+                couponData={couponData}
+              />
+              <About />
+              <Results />
+              <BookingSystem />
+              <Contact />
+              <Footer />
+            </>
+          } />
         </Routes>
       </BrowserRouter>
     </div>
