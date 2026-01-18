@@ -79,9 +79,21 @@ const Services = () => {
                     <p className="text-pink-100 text-sm">{service.duration} minutes</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold">
-                      {service.price === 0 ? 'FREE' : `$${service.price}`}
-                    </div>
+                    {expandedService === serviceId && (
+                      <div className="text-2xl font-bold">
+                        {service.variable_pricing ? 'Variable' : 
+                         service.price === 0 ? 'FREE' : 
+                         `$${service.price}`}
+                      </div>
+                    )}
+                    {!expandedService === serviceId && (
+                      <button
+                        onClick={() => handleServiceExpand(serviceId)}
+                        className="text-sm text-pink-100 hover:text-white"
+                      >
+                        View Details
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -91,6 +103,31 @@ const Services = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
+
+                {/* Expanded Details */}
+                {expandedService === serviceId && (
+                  <div className="mb-6 p-4 bg-pink-50 rounded-lg">
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Duration:</span>
+                        <span className="font-medium">{service.duration} minutes</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Price:</span>
+                        <span className="font-medium text-pink-600">
+                          {service.variable_pricing ? 'Consultation Required' : 
+                           service.price === 0 ? 'Complimentary' : 
+                           `$${service.price}`}
+                        </span>
+                      </div>
+                      {service.variable_pricing && (
+                        <p className="text-xs text-gray-500 mt-2">
+                          Pricing varies based on treatment area and goals
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 {/* Service Features */}
                 <div className="space-y-2 mb-6">
@@ -116,12 +153,21 @@ const Services = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <button
-                    onClick={() => handleBookNow(serviceId, service)}
-                    className="flex-1 bg-pink-600 text-white py-3 px-4 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
-                  >
-                    Book Now
-                  </button>
+                  {!expandedService === serviceId ? (
+                    <button
+                      onClick={() => handleServiceExpand(serviceId)}
+                      className="flex-1 bg-pink-600 text-white py-3 px-4 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+                    >
+                      View Details & Pricing
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => handleBookNow(serviceId, service)}
+                      className="flex-1 bg-pink-600 text-white py-3 px-4 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+                    >
+                      Book Now
+                    </button>
+                  )}
                   <button
                     onClick={() => window.open('https://calendly.com/info-o6c', '_blank')}
                     className="px-4 py-3 border-2 border-pink-500 text-pink-600 rounded-lg hover:bg-pink-50 transition-all duration-300 font-medium"
@@ -134,6 +180,33 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Package Information */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl shadow-lg p-8 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              💰 Special Package Deals Available!
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Save more with our customized treatment packages designed for optimal results. 
+              Multiple sessions at discounted rates for faster, more dramatic transformations.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="tel:323-613-5153" 
+                className="bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg"
+              >
+                📞 Call About Packages
+              </a>
+              <a 
+                href="#booking" 
+                className="border-2 border-pink-500 text-pink-600 py-3 px-6 rounded-lg hover:bg-pink-50 transition-all duration-300 font-semibold"
+              >
+                Book Consultation
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Call to Action */}
