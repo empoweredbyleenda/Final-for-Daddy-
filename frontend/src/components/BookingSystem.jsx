@@ -232,7 +232,7 @@ const BookingSystem = () => {
                 <button
                   onClick={() => validateStep(1) && setStep(2)}
                   disabled={!validateStep(1)}
-                  className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Continue to Details
                 </button>
