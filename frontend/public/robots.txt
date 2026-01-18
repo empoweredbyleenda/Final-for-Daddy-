@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://snatchedbeauties.la/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /admin
+Disallow: /api
+Disallow: /private
+
+# Crawl delay for politeness
+Crawl-delay: 1
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /

@@ -1,0 +1,31 @@
+{
+  "short_name": "Snatched Beauties",
+  "name": "Snatched Beauties - Premium Beauty Salon Los Angeles",
+  "description": "Professional beauty treatments including facials, microblading, lash extensions, and more in Los Angeles",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#db2777",
+  "background_color": "#fdf2f8",
+  "categories": ["beauty", "health", "lifestyle"],
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en-US"
+}
