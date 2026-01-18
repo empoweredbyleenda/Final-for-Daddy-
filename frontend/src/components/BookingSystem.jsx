@@ -414,7 +414,9 @@ const BookingSystem = () => {
                   <div className="border-t pt-2 mt-2">
                     <div className="flex justify-between text-lg font-semibold">
                       <span>Total:</span>
-                      <span className="text-pink-600">${calculateTotal()}</span>
+                      <span className="text-pink-600">
+                        {typeof calculateTotal() === 'string' ? calculateTotal() : `$${calculateTotal()}`}
+                      </span>
                     </div>
                   </div>
                 </div>
