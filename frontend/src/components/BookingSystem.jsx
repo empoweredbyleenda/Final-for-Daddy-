@@ -364,7 +364,7 @@ const BookingSystem = () => {
                 <button
                   onClick={handleBookingSubmit}
                   disabled={loading || !validateStep(2)}
-                  className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? 'Creating Booking...' : 'Create Booking'}
                 </button>
