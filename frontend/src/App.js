@@ -11,6 +11,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CouponModal from './components/CouponModal';
 import LandingPage from './components/LandingPage';
+import BookingSystem from './components/BookingSystem';
+import PaymentSuccess from './components/PaymentSuccess';
+import PaymentCancel from './components/PaymentCancel';
 import axios from 'axios';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
