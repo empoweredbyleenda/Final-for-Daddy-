@@ -126,7 +126,9 @@ const BookingSystem = () => {
   const calculateTotal = () => {
     const service = getSelectedServiceDetails();
     if (!service) return 0;
-    return service.unit_based ? service.price * formData.units : service.price;
+    if (service.variable_pricing) return 'Consultation Required';
+    if (service.price === 0) return 'Complimentary';
+    return service.price;
   };
 
   return (
