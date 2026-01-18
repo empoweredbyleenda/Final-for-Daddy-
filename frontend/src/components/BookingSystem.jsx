@@ -225,7 +225,7 @@ const BookingSystem = () => {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
                   />
                   <p className="text-sm text-gray-600 mt-1">
-                    Total: ${calculateTotal()}
+                    Total: {typeof calculateTotal() === 'string' ? calculateTotal() : `$${calculateTotal()}`}
                   </p>
                 </div>
               )}
