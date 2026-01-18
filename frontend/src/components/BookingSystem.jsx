@@ -426,7 +426,7 @@ const BookingSystem = () => {
                 <button
                   onClick={handlePayment}
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                  className="w-full bg-pink-600 text-white py-4 px-6 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {loading ? (
                     <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-2"></div>
