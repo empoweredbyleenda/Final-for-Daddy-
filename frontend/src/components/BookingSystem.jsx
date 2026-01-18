@@ -135,10 +135,10 @@ const BookingSystem = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Book Your <span className="text-pink-600">Appointment</span>
+            Book Your <span className="text-pink-600">Body Sculpting</span> Session
           </h2>
           <p className="text-xl text-gray-600">
-            Choose your service and let us make you look and feel amazing
+            Choose your transformation service and let us help you achieve your body goals
           </p>
         </div>
 
