@@ -79,19 +79,18 @@ const Services = () => {
                     <p className="text-pink-100 text-sm">{service.duration} minutes</p>
                   </div>
                   <div className="text-right">
-                    {expandedService === serviceId && (
+                    {expandedService === serviceId ? (
                       <div className="text-2xl font-bold">
                         {service.variable_pricing ? 'Variable' : 
                          service.price === 0 ? 'FREE' : 
                          `$${service.price}`}
                       </div>
-                    )}
-                    {!expandedService === serviceId && (
+                    ) : (
                       <button
                         onClick={() => handleServiceExpand(serviceId)}
-                        className="text-sm text-pink-100 hover:text-white"
+                        className="text-sm text-pink-100 hover:text-white underline"
                       >
-                        View Details
+                        View Pricing
                       </button>
                     )}
                   </div>
