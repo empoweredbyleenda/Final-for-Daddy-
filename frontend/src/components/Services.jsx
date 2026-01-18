@@ -135,14 +135,14 @@ const Services = () => {
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Not sure which service is right for you?
+              Ready to transform your body?
             </h3>
             <p className="text-gray-600 mb-6">
-              Book a free consultation with our beauty experts to find the perfect treatment plan
+              Book a free consultation with our certified Body Sculptor to create your custom treatment plan
             </p>
             <button
               onClick={() => handleBookNow('consultation', services.consultation)}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-8 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-pink-600 text-white py-4 px-8 rounded-xl hover:bg-pink-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Book Free Consultation
             </button>
