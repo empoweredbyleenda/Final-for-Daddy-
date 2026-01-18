@@ -36,14 +36,13 @@ stripe_publishable_key = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 # Beauty Service Packages (Server-side defined for security)
 SERVICE_PACKAGES = {
     "ultrasonic_cavitation": {"name": "Ultrasonic Cavitation", "price": 150.00, "duration": 60, "description": "Break down stubborn fat with advanced, non-invasive technology"},
-    "ems_muscle_stimulation": {"name": "EMS (Electrical Muscle Stimulation)", "price": 125.00, "duration": 45, "description": "Boost muscle tone and strength for a sculpted physique"},
-    "vacuum_therapy_bbl": {"name": "Vacuum Therapy BBL", "price": 200.00, "duration": 90, "description": "Lift and shape your buttocks with cutting-edge sculpting techniques"},
-    "weight_loss_program": {"name": "FDA-Approved Weight Loss Program", "price": 299.00, "duration": 30, "description": "Personalized plans to help you achieve and maintain your ideal weight"},
-    "fat_dissolve_injections": {"name": "Fat Dissolve Injections", "price": 250.00, "duration": 30, "description": "Naturally eliminate unwanted fat through targeted injection therapies"},
+    "ems_muscle_stimulation": {"name": "EMS (Electrical Muscle Stimulation)", "price": 125.00, "duration": 30, "description": "Boost muscle tone and strength for a sculpted physique"},
+    "vacuum_therapy_bbl": {"name": "Vacuum Therapy BBL", "price": 150.00, "duration": 90, "description": "Lift and shape your buttocks with cutting-edge sculpting techniques"},
+    "meal_prep_program": {"name": "Meal Prep by Our Chef", "price": 299.00, "duration": 30, "description": "Personalized meal prep program designed by our in-house certified chef"},
+    "fat_dissolve_injections": {"name": "Fat Dissolve Injections", "price": 0.00, "duration": 30, "description": "Naturally eliminate unwanted fat through targeted injection therapies", "variable_pricing": True},
     "electroporation": {"name": "Electroporation", "price": 175.00, "duration": 60, "description": "Painless, needle-free mesotherapy alternative for flawless skin using electric fields"},
     "radio_frequency": {"name": "Radio Frequency (RF)", "price": 140.00, "duration": 45, "description": "Skin tightening, wrinkle reduction, and body contouring using electromagnetic waves"},
     "lymphatic_massage": {"name": "Lymphatic Massage", "price": 120.00, "duration": 60, "description": "Post-op care massage stimulating lymphatic system for toxin and fluid removal"},
-    "body_contouring": {"name": "Body Contouring", "price": 180.00, "duration": 75, "description": "Non-invasive fat reduction techniques to enhance your body's appearance"},
     "wood_therapy": {"name": "Wood Therapy", "price": 130.00, "duration": 60, "description": "Vigorous massage using wooden tools to break down fat and reduce cellulite"},
     "consultation": {"name": "Body Sculpting Consultation", "price": 0.00, "duration": 30, "description": "Discuss body goals and create custom treatment plan"}
 }
