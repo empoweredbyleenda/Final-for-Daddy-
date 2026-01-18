@@ -257,7 +257,7 @@ const BookingSystem = () => {
               <div className="bg-pink-50 p-4 rounded-lg mb-6">
                 <h4 className="font-semibold text-gray-800">Selected Service:</h4>
                 <p className="text-pink-600">
-                  {getSelectedServiceDetails()?.name} - ${calculateTotal()} 
+                  {getSelectedServiceDetails()?.name} - {typeof calculateTotal() === 'string' ? calculateTotal() : `$${calculateTotal()}`} 
                   ({getSelectedServiceDetails()?.duration} minutes)
                 </p>
               </div>
