@@ -67,7 +67,7 @@ const Services = () => {
               className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
             >
               {/* Service Header */}
-              <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-6 text-white">
+              <div className="bg-pink-600 p-6 text-white">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-xl font-bold">{service.name}</h3>
@@ -75,11 +75,8 @@ const Services = () => {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">
-                      ${service.unit_based ? `${service.price}/unit` : service.price}
+                      {service.price === 0 ? 'FREE' : `$${service.price}`}
                     </div>
-                    {service.unit_based && (
-                      <p className="text-xs text-pink-100">per unit</p>
-                    )}
                   </div>
                 </div>
               </div>
