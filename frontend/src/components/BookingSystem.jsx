@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
-const stripePublishableKey = 'pk_test_51KUK9GDyQRmOKFPq1l2P6euvcfyWk3OLwe6D3Q9L9bInkbs6rRgzNzbez1PLoZ5fvdHOfo46RzXzr0ahTJRgk8dn002SANVDJM';
+const stripePublishableKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
 
 const BookingSystem = () => {
   const [services, setServices] = useState({});
