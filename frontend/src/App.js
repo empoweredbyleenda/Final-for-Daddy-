@@ -93,6 +93,48 @@ const HomePage = () => {
 };
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [couponData, setCouponData] = useState(null);
+
+  // Show modal after 5 seconds if user hasn't seen it
+  useEffect(() => {
+    const hasSeenBefore = localStorage.getItem('snatchedBeautiesModalSeen');
+    if (!hasSeenBefore) {
+      const timer = setTimeout(() => {
+        setShowModal(true);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setCouponData(null);
+    localStorage.setItem('snatchedBeautiesModalSeen', 'true');
+  };
+
+  const handleSubmitLead = async ({ email, name }) => {
+    setIsLoading(true);
+    try {
+      const response = await axios.post(`${API}/leads`, {
+        email,
+        name: name || undefined,
+      });
+      setCouponData(response.data);
+      localStorage.setItem('snatchedBeautiesModalSeen', 'true');
+    } catch (error) {
+      console.error('Error submitting lead:', error);
+      const fallbackCode = 'SNATCHED15';
+      setCouponData({
+        couponCode: fallbackCode,
+        discount: '15%',
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
