@@ -42,7 +42,7 @@ const PaymentCancel = () => {
         <div className="mt-6 p-4 bg-blue-50 rounded-lg">
           <p className="text-sm text-blue-600">
             <strong>Questions?</strong><br/>
-            Contact us at <a href="mailto:info@snatchedbeauties.la" className="underline">info@snatchedbeauties.la</a> or call <a href="tel:323-613-5153" className="underline">323-613-5153</a>
+            Contact us at <a href="mailto:support@snatchedbeauties.com" className="underline">support@snatchedbeauties.com</a> or call <a href="tel:323-613-5153" className="underline">323-613-5153</a>
           </p>
         </div>
       </div>
