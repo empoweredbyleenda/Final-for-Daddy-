@@ -174,7 +174,7 @@ const PaymentSuccess = () => {
         <div className="space-y-4">
           <button
             onClick={() => window.location.reload()}
-            className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 font-semibold"
+            className="w-full bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold"
           >
             Try Again
           </button>
