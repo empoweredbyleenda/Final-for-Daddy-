@@ -2,7 +2,7 @@ export const businessInfo = {
   name: "Snatched Beauties",
   tagline: "Changing Lives One Body at a Time",
   phone: "323-613-5153",
-  email: "info@snatchedbeauties.la",
+  email: "support@snatchedbeauties.com",
   address: "5710 W. Manchester Ave, CA 90045 Suite 211",
   hours: {
     weekday: "Monday - Friday: 9:00 AM - 6:00 PM",
