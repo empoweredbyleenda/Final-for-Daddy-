@@ -8,6 +8,7 @@ const Services = () => {
   const [services, setServices] = useState({});
   const [loading, setLoading] = useState(true);
   const [selectedService, setSelectedService] = useState(null);
+  const [expandedService, setExpandedService] = useState(null);
 
   useEffect(() => {
     fetchServices();
@@ -22,6 +23,10 @@ const Services = () => {
       console.error('Error fetching services:', error);
       setLoading(false);
     }
+  };
+
+  const handleServiceExpand = (serviceId) => {
+    setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
   const handleBookNow = (serviceId, service) => {
