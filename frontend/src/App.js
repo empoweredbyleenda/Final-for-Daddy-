@@ -97,6 +97,14 @@ function App() {
           } />
         </Routes>
       </BrowserRouter>
+      
+      <CouponModal
+        isOpen={showModal}
+        onClose={handleCloseModal}
+        onSubmit={handleSubmitLead}
+        isLoading={isLoading}
+        couponData={couponData}
+      />
     </div>
   );
 }
