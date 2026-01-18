@@ -153,7 +153,7 @@ const Services = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  {!expandedService === serviceId ? (
+                  {expandedService !== serviceId ? (
                     <button
                       onClick={() => handleServiceExpand(serviceId)}
                       className="flex-1 bg-pink-600 text-white py-3 px-4 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
